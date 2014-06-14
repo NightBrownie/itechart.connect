@@ -81,12 +81,50 @@
                             }
                         }
                     })
+                    .state('photosCompany', {
+                        url: '/photos/company/',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/photosPage/views/photosPage.html',
+                                controller: 'photosPageCtrl'
+                            }
+                        }
+                    })
+                    .state('photosDepartment', {
+                        url: '/photos/department/',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/photosPage/views/photosPage.html',
+                                controller: 'photosPageCtrl'
+                            }
+                        }
+                    })
+                    .state('photoGalleriesCompany', {
+                        url: '/photos/galleries/company/{id}',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/photosPage/views/photoGalleriesPage.html',
+                                controller: 'photoGalleriesPageCtrl'
+                            }
+                        }
+                    })
+                    .state('photoGalleriesDepartment', {
+                        url: '/photos/galleries/department/{id}',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/photosPage/views/photoGalleriesPage.html',
+                                controller: 'photoGalleriesPageCtrl'
+                            }
+                        }
+                    })
                     .state('profile', {
                         url: '/profile/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/profilePage/views/profilePage.html'}
-                        },
-                        controller: 'profilePageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/profilePage/views/profilePage.html',
+                                controller: 'profilePageCtrl'
+                            }
+                        }
                     })
                     .state('newcomers', {
                         url: '/newcomers/',
