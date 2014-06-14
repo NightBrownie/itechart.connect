@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="itechart-connect">
   <head>
     <title>Itechart.Connect</title>
 
     <link rel='stylesheet' href='/javascript/bower_components/bootstrap/dist/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/javascript/bower_components/bootstrap/dist/css/bootstrap-theme.min.css' />
     <link rel='stylesheet' href='/javascript/bower_components/angular/angular-csp.css' />
+    <link rel='stylesheet' href='/javascript/bower_components/font-awesome-bower/css/font-awesome.css' />
     <link rel='stylesheet' href='/stylesheets/base.css' />
 
 
@@ -22,18 +23,21 @@
     </header>
 
     <div id="main-content">
-        <div class="app-container" ng-app="itechart-connect">
+        <div class="main-container">
             <div class="topmenu">
                 <ul class="nav nav-pills">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#">Company</a></li>
-                    <li><a href="#">Departments</a></li>
-                    <li><a href="#">Rooms</a></li>
-                    <li><a href="#">Groups</a></li>
-                    <li><a href="#">Find People</a></li>
-                    <li class="pull-right"><a href="#">Newcomers <span class="badge">HOT!</span></a></li>
+                    <li ui-sref-active="active"><a ui-sref="home">Home</a></li>
+                    <li ui-sref-active="active"><a ui-sref="company">Company</a></li>
+                    <li ui-sref-active="active"><a ui-sref="departments">Departments</a></li>
+                    <li ui-sref-active="active"><a ui-sref="rooms">Rooms</a></li>
+                    <li ui-sref-active="active"><a ui-sref="groups">Groups</a></li>
+                    <li class="pull-right" ui-sref-active="active">
+                        <a ui-sref="newcomers">Newcomers <span class="badge">HOT!</span></a>
+                    </li>
                 </ul>
             </div>
+
+            <div class="content" ui-view></div>
         </div>
     </div>
 
@@ -47,6 +51,11 @@
     <script src="/javascript/app/appConfig.js"></script>
 
     <%//home page angular scripts%>
+    <script src="/javascript/app/companyPage/controllers/companyPageCtrl.js"></script>
+    <script src="/javascript/app/departmentsPage/controllers/departmentsPageCtrl.js"></script>
+    <script src="/javascript/app/groupsPage/controllers/groupsPageCtrl.js"></script>
     <script src="/javascript/app/homePage/controllers/homePageCtrl.js"></script>
+    <script src="/javascript/app/newcomersPage/controllers/newcomersPageCtrl.js"></script>
+    <script src="/javascript/app/roomsPage/controllers/roomsPageCtrl.js"></script>
   </body>
 </html>

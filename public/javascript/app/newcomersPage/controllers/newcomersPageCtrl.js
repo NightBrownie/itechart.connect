@@ -2,6 +2,7 @@
 
 (function (window, undefined) {
     angular.module('itechart-connect')
-        .controller('homePageCtrl', ['$scope', function($scope) {
+        .controller('newcomersPageCtrl', [ '$scope', function ($scope) {
+
         }]);
 })(window);

@@ -1,12 +1,21 @@
 @headerColor: #eee;
 @leftPadding: 50px;
+@tileLinkColor: white;
+
+/* common mixins */
+.rounded-corners(@radius: 5px) {
+  border-radius: @radius;
+}
+
+
+/* main stylesheet */
 
 header {
   height: 75px;
   background-color: @headerColor;
   padding-left: @leftPadding;
   padding-top: 20px;
-  border-radius: 10px;
+  .rounded-corners(10px);
 }
 
 body {
@@ -18,6 +27,71 @@ body {
   padding-top: 10px;
   padding-left: 50px;
   padding-right: 50px;
+  margin-bottom: 35px;
+}
+
+.container {
+
+  .sidebar-container {
+    h2 {
+      text-align: center;
+    }
+
+    .tiles-container {
+      padding: 0;
+      padding-top: 10px;
+      a {
+        text-decoration: none;
+      }
+      .tile-container {
+        padding: 5px;
+
+        .sidebar-tile {
+          .rounded-corners();
+
+          transition: opacity 200ms ease;
+          opacity: 1.0;
+          &:hover {
+            opacity: 0.7;
+          }
+
+          h3 {
+            color: @tileLinkColor;
+            text-shadow: 1px 1px #333;
+            margin: 0;
+          }
+          border: 1px solid #ccc;
+          height: 150px;
+          padding: 10px;
+
+          &.event-tile {
+            background: url("/images/tiles/events.jpg");
+          }
+          &.meetups-tile {
+            background: url("/images/tiles/meetups.png");
+          }
+          &.photos-tile {
+            background: url("/images/tiles/photos.jpg");
+          }
+          &.people-tile {
+            background: url("/images/tiles/people.jpg");
+          }
+          &.docs-tile {
+            background: url("/images/tiles/docs.jpg");
+          }
+        }
+      }
+    }
+
+  }
+
+  .info-container {
+    padding-top: 80px;
+    padding-right: 200px;
+    .feed-item {
+
+    }
+  }
 }
 
 a {
