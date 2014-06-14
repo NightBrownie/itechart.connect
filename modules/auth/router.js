@@ -12,7 +12,6 @@ router.route('/')
             'username': 'alexey.dudarev',
             'password' : ''
         }, function(e, r, data){
-            //console.log(data);
             return res.send(data);
         });
     });
