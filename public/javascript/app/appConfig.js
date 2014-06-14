@@ -17,12 +17,31 @@
                             }
                         }
                     })
-                    .state('departments',    {
-                        url: '/departments/',
+                    //TODO: need to rename folder and file
+                    .state('department', {
+                        url: '/department/',
                         views: {
                             'main-view': {
                                 templateUrl: '/javascript/app/departmentsPage/views/departmentsPage.html',
                                 controller: 'departmentsPageCtrl'
+                            }
+                        }
+                    })
+                    .state('documentsDepartment', {
+                        url: '/documents/department/',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/docsPage/views/docsPage.html',
+                                controller: 'docsPageCtrl'
+                            }
+                        }
+                    })
+                    .state('documentsCompany', {
+                        url: '/documents/company/',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/docsPage/views/docsPage.html',
+                                controller: 'docsPageCtrl'
                             }
                         }
                     })
@@ -44,7 +63,7 @@
                             }
                         }
                     })
-                    .state('people', {
+                    .state('peopleCompany', {
                         url: '/people/company/{tag}',
                         views: {
                             'main-view': {
@@ -53,7 +72,7 @@
                             }
                         }
                     })
-                    .state('peopleDept', {
+                    .state('peopleDepartment', {
                         url: '/people/department/{tag}',
                         views: {
                             'main-view': {
