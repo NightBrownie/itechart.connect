@@ -1,0 +1,11 @@
+<div class="col-md-6 tile-container">
+    <a ng-href="{{destinationUrl}}">
+        <div class="sidebar-tile" ng-style="{ 'background': 'url('
+        + (backgroundImgUrl || '/javascript/app/common/directives/infoBarTile/defaultBackground.png') + ')' }">
+            <h3 ng-model="title">
+                <i class="fa {{iconClass || 'fa-circle-thin'}}"></i>
+            </h3>
+            <span class="description" ng-if="description != null" ng-model="description"></span>
+        </div>
+    </a>
+</div>
