@@ -8,7 +8,7 @@
                     iconClass: 'fa-child',
                     title: 'People',
                     backgroundImgUrl: '/images/tiles/people.jpg',
-                    destinationUrl: '#'
+                    destinationUrl: '/people/company/'
                 },
                 {
                     iconClass: 'fa-files-o',
@@ -31,7 +31,7 @@
                 {
                     iconClass: 'fa-calendar',
                     title: 'Meetups',
-                    //backgroundImgUrl: '/images/tiles/meetups.png',
+                    backgroundImgUrl: '/images/tiles/meetups.png',
                     destinationUrl: '#'
                 }
             ];

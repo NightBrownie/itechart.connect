@@ -2,7 +2,8 @@
 
 (function (window, undefined) {
     angular.module('itechart-connect')
-        .controller('peoplePageCtrl', ['$scope', function ($scope) {
+        .controller('peoplePageCtrl', ['$scope', '$stateParams', '$location',
+            function ($scope, $stateParams, $location) {
             $scope.sidebarTiles = [
                 {
                     iconClass: 'fa-child',
@@ -31,9 +32,19 @@
                 {
                     iconClass: 'fa-calendar',
                     title: 'Meetups',
-                    //backgroundImgUrl: '/images/tiles/meetups.png',
+                    backgroundImgUrl: '/images/tiles/meetups.png',
                     destinationUrl: '#'
                 }
             ];
+
+            $scope.selectedTags = [];
+
+            //chosen tag settings from url param
+            if ($stateParams.tag != undefined && $stateParams.tag != '') {
+                $scope.selectedTags.push({name: $stateParams.tag});
+            }
+
+            //check which search page do we located at (department of company)
+            $scope.isCompanySearch = /^\/people\/company\/*/.test($location.url());
         }]);
 })(window);

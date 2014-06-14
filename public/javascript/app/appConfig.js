@@ -45,7 +45,16 @@
                         }
                     })
                     .state('people', {
-                        url: '/people/',
+                        url: '/people/company/{tag}',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/peoplePage/views/peoplePage.html',
+                                controller: 'peoplePageCtrl'
+                            }
+                        }
+                    })
+                    .state('peopleDept', {
+                        url: '/people/department/{tag}',
                         views: {
                             'main-view': {
                                 templateUrl: '/javascript/app/peoplePage/views/peoplePage.html',

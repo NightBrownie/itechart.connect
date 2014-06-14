@@ -6,8 +6,12 @@
             return {
                 restrict: 'AE',
                 templateUrl: '/javascript/app/common/directives/userSearch/userSearch.html',
+                scope: {
+                    selectedTags: '='
+                },
                 controller: ['$scope', function ($scope) {
-                    $scope.selectedTags = [];
+                    //tags are given from params
+                    //$scope.selectedTags = [];
 
                     $scope.currentTag = {name: ''};
 
