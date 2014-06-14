@@ -5,4 +5,4 @@
         .controller('departmentsPageCtrl', [ '$scope', function ($scope) {
 
         }]);
-})(window);
+})(window)

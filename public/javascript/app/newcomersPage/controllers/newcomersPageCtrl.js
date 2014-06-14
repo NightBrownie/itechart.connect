@@ -5,4 +5,4 @@
         .controller('newcomersPageCtrl', [ '$scope', function ($scope) {
 
         }]);
-})(window);
+})(window)

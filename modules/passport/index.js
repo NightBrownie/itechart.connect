@@ -2,48 +2,39 @@
 
 var passport = require('passport'),
     smgService = require('../../smg'),
-    LocalStrategy = require('passport-local').Strategy;
+    BasicStrategy = require('passport-http').BasicStrategy;
 
 function getRemoteUser(username, password, done) {
     smgService.sendSmgRequest({
         method: 'Authenticate'
     }, {
         'username': username,
-        'password' : password
+        'password': password
     }, function (err, response, data) {
         return done(err, data);
     });
 }
 
 exports.initialize = function (app) {
-    passport.use(new LocalStrategy(getRemoteUser));
-
-    passport.serializeUser(function (user, done) {
-        return done(null, user);
-    });
-
-    passport.deserializeUser(function (user, done) {
-        done(null, user);
-    });
+    passport.use(new BasicStrategy({},
+        function (username, password, done) {
+            // Find the user by username.  If there is no user with the given
+            // username, or the password is not correct, set the user to `false` to
+            // indicate failure.  Otherwise, return the authenticated `user`.
+            getRemoteUser(username, password, function (err, data) {
+                data = JSON.parse(data);
+                if (err) {
+                    return done(err);
+                }
+                if (!data.SessionId) {
+                    return done(null, false);
+                }
+                return done(null, data.SessionId);
+            });
+        }));
 
     app.use(passport.initialize());
     app.use(passport.session());
 };
 
-exports.ensureLogin = function (req, res, next) {
-    var ignore = [
-        '/login'
-    ];
-
-    // Do not request login for unprotected URLs
-    if (ignore.indexOf(req.path) >= 0) {
-        return next();
-    }
-
-    // Do not request login if user is already logged in
-    if (req.isAuthenticated()) {
-        return next();
-    }
-
-    return res.redirect('/login');
-};
+exports.auth = passport.authenticate('basic', { session: false });

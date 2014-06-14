@@ -11,30 +11,38 @@
                     .state('company', {
                         url: '/company/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/companyPage/views/companyPage.html'}
-                        },
-                        controller: 'companyPageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/companyPage/views/companyPage.html',
+                                controller: 'companyPageCtrl'
+                            }
+                        }
                     })
                     .state('departments',    {
                         url: '/departments/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/departmentsPage/views/departmentsPage.html'}
-                        },
-                        controller: 'departmentsPageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/departmentsPage/views/departmentsPage.html',
+                                controller: 'departmentsPageCtrl'
+                            }
+                        }
                     })
                     .state('groups', {
                         url: '/groups/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/groupsPage/views/groupsPage.html'}
-                        },
-                        controllers: 'groupsPageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/groupsPage/views/groupsPage.html',
+                                controller: 'groupsPageCtrl'
+                            }
+                        }
                     })
                     .state('home', {
                         url: '/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/homePage/views/homePage.html'}
-                        },
-                        controller: 'homePageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/homePage/views/homePage.html',
+                                controller: 'homePageCtrl'
+                            }
+                        }
                     })
                     .state('people', {
                         url: '/people/',
@@ -46,18 +54,22 @@
                     .state('newcomers', {
                         url: '/newcomers/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/newcomersPage/views/newcomersPage.html'}
-                        },
-                        controller: 'newcomersPageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/newcomersPage/views/newcomersPage.html',
+                                controller: 'newcomersPageCtrl'
+                            }
+                        }
                     })
                     .state('rooms', {
                         url: '/rooms/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/roomsPage/views/roomsPage.html'}
-                        },
-                        controller: 'roomsPageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/roomsPage/views/roomsPage.html',
+                                controller: 'roomsPageCtrl'
+                            }
+                        }
                     });
 
-                //$locationProvider.html5Mode(true);
+                $locationProvider.html5Mode(true);
         }]);
 })(window);
