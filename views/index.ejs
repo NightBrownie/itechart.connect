@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title></title>
+
+    <link rel='stylesheet' href='/javascript/bower_components/bootstrap/dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/javascript/bower_components/bootstrap/dist/css/bootstrap-theme.min.css' />
+    <link rel='stylesheet' href='/javascript/bower_components/angular/angular-csp.css' />
+    <link rel='stylesheet' href='/stylesheets/base.less' />
+
+
+    <%//importing default libs%>
+    <script src="/javascript/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/javascript/bower_components/angular/angular.min.js"></script>
+    <script src="/javascript/bower_components/angular-strap/dist/angular-strap.min.js"></script>
+    <script src="/javascript/bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
+    <script src="/javascript/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <header>
+    </header>
+
+    <div id="main-content">
+        <div class="app-container" ng-app="itechart-connect">
+
+        </div>
+    </div>
+
+    <footer>
+    </footer>
+
+    <%//custom scripts section%>
+    <script src="/javascript/app/app.js"></script>
   </body>
 </html>
