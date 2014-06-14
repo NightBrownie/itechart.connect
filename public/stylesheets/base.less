@@ -47,6 +47,7 @@ header.navbar {
 
 body {
   padding: 50px;
+  padding-top: 35px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -116,6 +117,43 @@ body {
 
   }
 
+  .profile-container {
+    padding-bottom: 20px;
+    .profile-image-container {
+      padding-top: 20px;
+      text-align: center;
+      img {
+        .rounded-corners();
+      }
+    }
+
+    dl {
+      dd {
+        margin-bottom: 15px;
+      }
+    }
+    .profile-skills-row {
+        h5 {
+        text-align: center;
+      }
+      .profile-skills-container {
+        border-right: 1px solid #ddd;
+      }
+    }
+    .github-iframe-container {
+      text-align: center;
+      .github-iframe {
+        //display: inline-block;
+      }
+    }
+    .github-link {
+      display: block;
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  }
+
   .info-container {
     padding-right: 150px;
     .feed-item {
@@ -162,6 +200,10 @@ a.tag {
   &:nth-child(5n) {
     font-size: 1.6em;
   }
+}
+
+.badge.badge-hot {
+  background-color: #cf2233;
 }
 
 a {

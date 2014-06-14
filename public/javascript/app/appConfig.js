@@ -51,6 +51,13 @@
                         },
                         controller: 'peoplePageCtrl'
                     })
+                    .state('profile', {
+                        url: '/profile/',
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/profilePage/views/profilePage.html'}
+                        },
+                        controller: 'profilePageCtrl'
+                    })
                     .state('newcomers', {
                         url: '/newcomers/',
                         views: {
