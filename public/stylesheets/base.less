@@ -62,6 +62,7 @@ body {
           }
           border: 1px solid #ccc;
           height: 150px;
+          max-width: 170px;
           padding: 10px;
 
           &.event-tile {
@@ -87,10 +88,31 @@ body {
 
   .info-container {
     padding-top: 80px;
-    padding-right: 200px;
+    padding-right: 150px;
     .feed-item {
 
     }
+
+    .thumbnail.person-container {
+      .caption {
+        text-align: center;
+
+        h3 {
+          a { color: black; }
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+a.tag {
+  font-size:0.75em;
+  &:nth-child(3n), &:first-child {
+    font-size: 1.2em;
+  }
+  &:nth-child(5n) {
+    font-size: 1.6em;
   }
 }
 
