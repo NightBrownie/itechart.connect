@@ -5,4 +5,4 @@
         .controller('companyPageCtrl', [ '$scope', function ($scope) {
 
         }]);
-})(window);
+})(window)

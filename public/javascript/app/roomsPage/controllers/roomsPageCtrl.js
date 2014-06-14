@@ -5,4 +5,4 @@
         .controller('roomsPageCtrl', [ '$scope', function ($scope) {
 
         }]);
-})(window);
+})(window)

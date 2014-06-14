@@ -5,4 +5,4 @@
         .controller('groupsPageCtrl', [ '$scope', function ($scope) {
 
         }]);
-})(window);
+})(window)
