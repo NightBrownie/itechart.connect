@@ -10,32 +10,45 @@
                 $stateProvider
                     .state('company', {
                         url: '/company/',
-                        templateUrl: '/javascript/app/companyPage/views/companyPage.html',
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/companyPage/views/companyPage.html'}
+                        },
                         controller: 'companyPageCtrl'
                     })
                     .state('departments',    {
                         url: '/departments/',
-                        templateUrl: '/javascript/app/departmentsPage/views/departmentsPage.html',
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/departmentsPage/views/departmentsPage.html'}
+                        },
                         controller: 'departmentsPageCtrl'
                     })
                     .state('groups', {
                         url: '/groups/',
-                        templateUrl: '/javascript/app/groupsPage/views/groupsPage.html',
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/groupsPage/views/groupsPage.html'}
+                        },
                         controllers: 'groupsPageCtrl'
                     })
                     .state('home', {
                         url: '/',
-                        templateUrl: '/javascript/app/homePage/views/homePage.html',
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/homePage/views/homePage.html'}
+                        },
                         controller: 'homePageCtrl'
                     })
                     .state('newcomers', {
                         url: '/newcomers/',
-                        templateUrl: '/javascript/app/newcomersPage/views/newcomersPage.html',
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/newcomersPage/views/newcomersPage.html'}
+                        },
                         controller: 'newcomersPageCtrl'
                     })
                     .state('rooms', {
                         url: '/rooms/',
-                        templateUrl: '/javascript/app/roomsPage/views/roomsPage.html'
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/roomsPage/views/roomsPage.html'}
+                        },
+                        controller: 'roomsPageCtrl'
                     });
 
                 //$locationProvider.html5Mode(true);
