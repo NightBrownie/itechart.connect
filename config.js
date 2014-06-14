@@ -6,7 +6,9 @@ module.exports = {
     },
     database:{
         url: 'mongodb://dbs004.mongosoup.de/cc_cDPcqLIDmIai',
-        user: 'cDPcqLIDmIai',
-        pass: 'JfaodWeAgHqB'
+        auth: {
+            user: 'cDPcqLIDmIai',
+            pass: 'JfaodWeAgHqB'
+        }
     }
 }
