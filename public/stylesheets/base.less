@@ -89,11 +89,29 @@ body {
   }
 
   .info-container {
-    padding-top: 80px;
     padding-right: 150px;
     .feed-item {
-
+      &:first-child {
+        margin-top: 80px;
+      }
     }
+
+    .search-bar-container {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 20px;
+      button.search-button {
+        margin-left: 15px;
+        min-width: 112px;
+      }
+      .input-group {
+        margin-bottom: 10px;
+      }
+      .search-tag-cloud {
+        padding: 0;
+      }
+    }
+
 
     .thumbnail.person-container {
       .caption {
