@@ -47,9 +47,11 @@
                     .state('people', {
                         url: '/people/',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/peoplePage/views/peoplePage.html'}
-                        },
-                        controller: 'peoplePageCtrl'
+                            'main-view': {
+                                templateUrl: '/javascript/app/peoplePage/views/peoplePage.html',
+                                controller: 'peoplePageCtrl'
+                            }
+                        }
                     })
                     .state('profile', {
                         url: '/profile/',

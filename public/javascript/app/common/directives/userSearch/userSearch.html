@@ -1,0 +1,24 @@
+<div class="col-md-8 info-container">
+    <div class="row search-bar-container">
+        <div class="input-append">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter tags here" ng-model="currentTag.name">
+                <span class="btn btn-info search-button input-group-addon"ng-click="addTag(currentTag)">Add <i class="fa fa-plus"></i></span>
+            </div>
+        </div>
+        <ul class="search-tag-cloud">
+            <li class="tag-cloud" ng-repeat="selectedTag in selectedTags" ng-click="removeTag(selectedTag)">
+                {{selectedTag.name}}
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <user-info-tile ng-repeat="person in foundPeople" user-info="person" ng-class-even="'hidden'"></user-info-tile>
+        </div>
+
+        <div class="col-md-6">
+            <user-info-tile ng-repeat="person in foundPeople" user-info="person" ng-class-odd="'hidden'"></user-info-tile>
+        </div>
+    </div>
+</div>
