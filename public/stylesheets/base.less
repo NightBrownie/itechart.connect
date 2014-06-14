@@ -7,6 +7,18 @@
   border-radius: @radius;
 }
 
+/* fonts */
+
+@font-face {
+  font-family: 'hello_heartacheregular';
+  src: url('/fonts/hello_heartache-webfont.eot');
+  src: url('/fonts/hello_heartache-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/hello_heartache-webfont.woff') format('woff'),
+  url('/fonts/hello_heartache-webfont.ttf') format('truetype'),
+  url('/fonts/hello_heartache-webfont.svg#hello_heartacheregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /* main stylesheet */
 
@@ -16,6 +28,20 @@ header {
   padding-left: @leftPadding;
   padding-top: 20px;
   .rounded-corners(10px);
+
+  img {
+    float: left;
+  }
+
+  .connect-text {
+    display: block;
+    float: left;
+    font-family: 'hello_heartacheregular';
+    margin-top: -12px;
+    font-size: 50px;
+    margin-left: 10px;
+    font-weight: bold;
+  }
 }
 
 body {
@@ -100,9 +126,9 @@ body {
       padding-left: 15px;
       padding-right: 15px;
       padding-bottom: 20px;
-      button.search-button {
-        margin-left: 15px;
-        min-width: 112px;
+      .search-button {
+        min-width: 84px;
+        color: white;
       }
       .input-group {
         margin-bottom: 10px;
