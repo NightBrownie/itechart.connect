@@ -1,7 +1,7 @@
 'use strict';
 
-exports.getEmployees = function (arrIds, callback) {
-    this.find({'_id': {'$in': arrIds} }, function(err, employees){
+exports.getAllEmployees = function (callback) {
+    this.find({}, function(err, employees){
         callback(err, employees);
     });
 };
