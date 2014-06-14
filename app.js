@@ -23,7 +23,7 @@ mongoose.connect(config.database.url, {}, function (err) {
     app.use(express.static(path.join(__dirname, 'public')));
 
     passport.initialize(app);
-    app.use(passport.ensureLogin);
+    //app.use(passport.ensureLogin);
 
     modules.init(app);
 
