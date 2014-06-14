@@ -18,15 +18,8 @@
                 </div>
             </div>
 
-            <div class="col-md-4 sidebar-container">
-                <h2>Explore</h2>
-                <div class="container-fluid tiles-container">
-                    <info-bar-tile ng-repeat="tile in sidebarTiles" icon-class="tile.iconClass"
-                            title="tile.title"
-                            background-img-url="tile.backgroundImgUrl"
-                            destination-url="tile.destinationUrl"></info-bar-tile>
-                </div>
-            </div>
+            <tiles-sidebar tiles="sidebarTiles"></tiles-sidebar>
         </div>
     </div>
 </div>
+

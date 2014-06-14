@@ -14,8 +14,7 @@
                 title: '=',
                 backgroundImgUrl: '=',
                 destinationUrl: '='
-            },
-            transclude: true
+            }
         }
     });
 })(window);
