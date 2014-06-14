@@ -1,5 +1,7 @@
 'use strict';
 
 (function (window, undefined){
-    var app = angular.module('itechart-connect', []);
+    angular.module('itechart-connect',
+        ['mgcrea.ngStrap',
+        'ui.router']);
 })(window);
