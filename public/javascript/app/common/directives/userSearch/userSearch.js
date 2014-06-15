@@ -9,7 +9,7 @@
                 scope: {
                     selectedTags: '='
                 },
-                controller: ['$scope', function ($scope) {
+                controller: ['$scope', 'CommonFactory', function ($scope, CommonFactory) {
                     //tags are given from params
                     //$scope.selectedTags = [];
 
@@ -102,6 +102,43 @@
                             ]
                         }
                     ];
+
+                    $scope.peopleSmg = [];
+
+                    $scope.people = [];
+
+                    CommonFactory.getAllUsers().then(function (users) {
+                        $scope.peopleSmg = users.smgEmployees;
+
+                        for (var person in $scope.peopleSmg) {
+                            var currPerson = $scope.peopleSmg[person];
+
+                            var currentItem = {
+                                profileId: currPerson.ProfileId,
+                                name: (currPerson.FirstNameEng + ' ' + currPerson.LastNameEng),
+                                github: '',
+                                avatarImgLink: currPerson.Image,
+                                skills: [],
+                                interests: []
+                            };
+
+                            if (currentItem.profileId != 453
+                                && currentItem.profileId != 479
+                                && currentItem.profileId != 525) {
+
+                                $scope.people.push({
+                                    profileId: currPerson.ProfileId,
+                                    name: (currPerson.FirstNameEng + ' ' + currPerson.LastNameEng),
+                                    github: '',
+                                    avatarImgLink: currPerson.Image,
+                                    skills: [],
+                                    interests: []
+                                });
+                            }
+                        };
+
+                        $scope.foundPeople = $scope.foundPeople.concat($scope.people);
+                    });
 
                     $scope.addTag = function(tag) {
                         //check for tag existance
