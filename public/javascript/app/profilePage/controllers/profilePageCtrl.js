@@ -15,7 +15,7 @@
                     skills: []
                 };
 
-                $scope.smgUser = {};
+                $scope.smgUser = undefined;
 
                 CommonFactory.getAllUsers().then(function (users) {
                     if (users && users.smgEmployees.length && users.smgEmployees.length > 0) {
@@ -25,7 +25,7 @@
                             }
                         }
 
-                        if (smgUser == {}) {        
+                        if (smgUser == undefined) {
                             $location.url('/');
                             return;
                         }
