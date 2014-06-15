@@ -45,6 +45,33 @@
                             }
                         }
                     })
+                    .state('eventEdit', {
+                        url: '/event/edit/{id}',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/eventPage/views/eventPage.html',
+                                controller: 'eventPageCtrl'
+                            }
+                        }
+                    })
+                    .state('eventCreate', {
+                        url: '/event/create/',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/eventPage/views/eventPage.html',
+                                controller: 'eventPageCtrl'
+                            }
+                        }
+                    })
+                    .state('eventInfo', {
+                        url: '/event/{id}',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/eventPage/views/eventPage.html',
+                                controller: 'eventPageCtrl'
+                            }
+                        }
+                    })
                     .state('groups', {
                         url: '/groups/',
                         views: {

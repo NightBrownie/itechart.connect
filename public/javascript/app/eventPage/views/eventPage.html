@@ -1,0 +1,68 @@
+<div>
+    <div class="container">
+        <div class="row">
+            <!--title: String,
+            fullContent: String,
+            type: Number,// eventPage, gallery, meetup
+            visibility: Number// 0 - company, 1-20 - department, 21-Inf - groups-->
+
+            <div class="event-container col-md-6">
+                <div class="view-layout" ng-if="!isInEditMode">
+                    <div class="event-title">
+                        <h2>{{event.title}}</h2>
+                    </div>
+
+                    <div class="event-content">
+                        <span>{{event.fullContent}}</span>
+                    </div>
+
+                    <div class="event-type">
+                        <span>{{event.type == 2 ? 'Meetup' : 'Event'}}</span>
+                    </div>
+                </div>
+
+                <div class="edit-layout" ng-if="isInEditMode">
+                    <div class="event-title">
+                        <div class="description">
+                            Title:
+                        </div>
+                        <div class="value">
+                            <input ng-model="event.title"/>
+                        </div>
+                    </div>
+
+                    <div class="event-content">
+                        <div class="description">
+                            Content:
+                        </div>
+                        <div class="value">
+                            <textarea ng-model="event.fullContent"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="event-type">
+                        <div class="description">
+                            Event type:
+                        </div>
+                        <div class="value">
+                            <input ng-model="event.type"/>
+                        </div>
+                    </div>
+
+                    <div class="event-visibility">
+                        <div class="description">
+                            Event visibility (company, department, group):
+                        </div>
+                        <div class="value">
+                            <input ng-model="event.visibility"/>
+                        </div>
+                    </div>
+
+                    <div class="save-btn-container">
+                        <button class="save-event-btn" ng-click="saveEvent()">{{isInCreateMode ? 'Create event' : 'Save event'}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
