@@ -1,6 +1,6 @@
 <div>
     <div class="container">
-        <div class="row">
+        <div class="row event-page">
             <!--title: String,
             fullContent: String,
             type: Number,// eventPage, gallery, meetup
@@ -21,45 +21,45 @@
                     </div>
                 </div>
 
-                <div class="edit-layout" ng-if="isInEditMode">
+                <div class="edit-layout jumbotron" ng-if="isInEditMode">
                     <div class="event-title">
-                        <div class="description">
+                        <label class="description">
                             Title:
-                        </div>
+                        </label>
                         <div class="value">
-                            <input ng-model="event.title"/>
+                            <input class="form-control" ng-model="event.title"/>
                         </div>
                     </div>
 
                     <div class="event-content">
-                        <div class="description">
+                        <label class="description">
                             Content:
-                        </div>
+                        </label>
                         <div class="value">
-                            <textarea ng-model="event.fullContent"></textarea>
+                            <textarea class="form-control" ng-model="event.fullContent"></textarea>
                         </div>
                     </div>
 
                     <div class="event-type">
-                        <div class="description">
+                        <label class="description">
                             Event type:
-                        </div>
+                        </label>
                         <div class="value">
-                            <input ng-model="event.type"/>
+                            <input class="form-control" ng-model="event.type"/>
                         </div>
                     </div>
 
                     <div class="event-visibility">
-                        <div class="description">
+                        <label class="description">
                             Event visibility (company, department, group):
-                        </div>
+                        </label>
                         <div class="value">
-                            <input ng-model="event.visibility"/>
+                            <input class="form-control" ng-model="event.visibility"/>
                         </div>
                     </div>
 
                     <div class="save-btn-container">
-                        <button class="save-event-btn" ng-click="saveEvent()">{{isInCreateMode ? 'Create event' : 'Save event'}}</button>
+                        <button class="btn btn-primary btn-lg save-event-btn" ng-click="saveEvent()">{{isInCreateMode ? 'Create event' : 'Save event'}}</button>
                     </div>
                 </div>
             </div>

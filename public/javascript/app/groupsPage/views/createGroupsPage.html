@@ -1,18 +1,20 @@
 <div>
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
-                <form method="post" id="create-group-form">
-                    <div class="form-group">
-                        <label for="groupName">Group Name</label>
-                        <input type="text" class="form-control" name="groupName" placeholder="Enter Group Name" ng-model="createModel.name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="description">Description</label>
-                        <input type="text" class="form-control" name="description" placeholder="Enter Description" ng-model="createModel.description">
-                    </div>
-                </form>
-                <button class="btn btn-primary" ng-click="createGroup()">Create Group</button>
+            <div class="col-md-6">
+                <div class="jumbotron">
+                    <form method="post" id="create-group-form">
+                        <div class="form-group">
+                            <label for="groupName">Group Name</label>
+                            <input type="text" class="form-control" name="groupName" placeholder="Enter Group Name" ng-model="createModel.name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" name="description" placeholder="Enter Description" ng-model="createModel.description">
+                        </div>
+                    </form>
+                    <button class="btn btn-primary" ng-click="createGroup()">Create Group</button>
+                </div>
             </div>
         </div>
     </div>
