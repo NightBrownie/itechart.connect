@@ -17,7 +17,8 @@
 
                     $scope.foundPeople = [
                         {
-                            profileId: 3,
+                            profileId: 525,
+                            github: 'andreisumar',
                             name: 'Andrei Sumar',
                             avatarImgLink: 'http://cs620629.vk.me/v620629787/33a/uwfwQQ7fb7Y.jpg',
                             skills: [
@@ -43,8 +44,9 @@
                             ]
                         },
                         {
-                            profileId: 1,
+                            profileId: 453,
                             name: 'Nikita Klushnikov',
+                            github: 'NightBrownie',
                             avatarImgLink: 'http://cs10586.vk.me/u22101394/a_12048dd1.jpg',
                             skills: [
                                 {name :'Angular.js'},
@@ -72,8 +74,9 @@
                             ]
                         },
                         {
-                            profileId: 2,
+                            profileId: 479,
                             name: 'Alexey Dudarev',
+                            github: 'AlexDudarev',
                             avatarImgLink: 'http://m.c.lnkd.licdn.com/mpr/mpr/shrink_200_200/p/4/000/14e/2bc/1a797df.jpg',
                             skills: [
                                 {name :'Angular.js'},
