@@ -17,33 +17,57 @@
 
                     $scope.foundPeople = [
                         {
+                            profileId: 3,
+                            name: 'Andrei Sumar',
+                            avatarImgLink: 'http://cs620629.vk.me/v620629787/33a/uwfwQQ7fb7Y.jpg',
+                            skills: [
+                                {name :'Knockout.js'},
+                                {name :'WinAPI'},
+                                {name :'HTML5'},
+                                {name :'CSS3'},
+                                {name :'C++'},
+                                {name :'C#'},
+                                {name :'STL'},
+                                {name :'ASP.NET WebForms'},
+                                {name :'ASP.NET MVC'},
+                                {name :'Delphi 7'},
+                                {name :'Scheme'},
+                                {name :'Turbo Pascal'}
+                            ],
+                            interests: [
+                                {name :'Bicycle'},
+                                {name :'Literature'},
+                                {name :'Travelling'},
+                                {name :'Music'},
+                                {name :'Running'}
+                            ]
+                        },
+                        {
                             profileId: 1,
                             name: 'Nikita Klushnikov',
                             avatarImgLink: 'http://cs10586.vk.me/u22101394/a_12048dd1.jpg',
                             skills: [
                                 {name :'Angular.js'},
+                                {name :'Knockout.js'},
+                                {name :'Java EE'},
+                                {name :'Java SE'},
                                 {name :'WinAPI'},
-                                {name :'HTML6'},
-                                {name :'CSS4'},
-                                {name :'C++'},
+                                {name :'HTML5'},
+                                {name :'CSS3'},
+                                {name :'WPF'},
                                 {name :'C#'},
                                 {name :'STL'},
-                                {name :'Project Management'},
+                                {name :'ASP.NET WebForms'},
                                 {name :'ASP.NET MVC'},
-                                {name :'Angular.js'},
-                                {name :'WinAPI'},
-                                {name :'HTML6'},
-                                {name :'CSS4'},
-                                {name :'C++'},
-                                {name :'C#'},
-                                {name :'STL'},
-                                {name :'Project Management'}
                             ],
                             interests: [
-                                {name :'Running very fast'},
-                                {name :'Serious business'},
-                                {name :'Walking'},
-                                {name :'Sitting'},
+                                {name :'Music'},
+                                {name: 'Sports'},
+                                {name: 'Hackathons'},
+                                {name :'Bicycle'},
+                                {name :'iTechArt events'},
+                                {name :'Literature'},
+                                {name :'Travelling'},
                                 {name :'Running'}
                             ]
                         },
@@ -54,58 +78,23 @@
                             skills: [
                                 {name :'Angular.js'},
                                 {name :'WinAPI'},
-                                {name :'HTML6'},
-                                {name :'CSS4'},
-                                {name :'C++'},
-                                {name :'C#'},
                                 {name :'STL'},
+                                {name :'C++'},
                                 {name :'Project Management'},
                                 {name :'ASP.NET MVC'},
                                 {name :'Angular.js'},
                                 {name :'WinAPI'},
-                                {name :'HTML6'},
-                                {name :'CSS4'},
-                                {name :'C++'},
-                                {name :'C#'},
-                                {name :'STL'},
-                                {name :'Project Management'}
+                                {name :'HTML5'},
+                                {name :'CSS3'},
+                                {name :'C#'}
                             ],
                             interests: [
-                                {name :'Running very fast'},
-                                {name :'Serious business'},
-                                {name :'Walking'},
-                                {name :'Sitting'},
-                                {name :'Running'}
-                            ]
-                        },
-                        {
-                            profileId: 3,
-                            name: 'Andrei Sumar',
-                            avatarImgLink: 'http://cs620629.vk.me/v620629787/33a/uwfwQQ7fb7Y.jpg',
-                            skills: [
-                                {name :'Angular.js'},
-                                {name :'WinAPI'},
-                                {name :'HTML6'},
-                                {name :'CSS4'},
-                                {name :'C++'},
-                                {name :'C#'},
-                                {name :'STL'},
-                                {name :'Project Management'},
-                                {name :'ASP.NET MVC'},
-                                {name :'Angular.js'},
-                                {name :'WinAPI'},
-                                {name :'HTML6'},
-                                {name :'CSS4'},
-                                {name :'C++'},
-                                {name :'C#'},
-                                {name :'STL'},
-                                {name :'Project Management'}
-                            ],
-                            interests: [
-                                {name :'Running very fast'},
-                                {name :'Serious business'},
-                                {name :'Walking'},
-                                {name :'Sitting'},
+                                {name :'Sports'},
+                                {name :'Football'},
+                                {name :'Hockey'},
+                                {name :'Literature'},
+                                {name :'Travelling'},
+                                {name :'Music'},
                                 {name :'Running'}
                             ]
                         }
