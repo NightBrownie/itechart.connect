@@ -2,8 +2,8 @@
 
 (function (window, undefined) {
     angular.module('itechart-connect')
-        .controller('profilePageCtrl', [ '$scope', '$stateParams', 'CommonFactory',
-            function ($scope, $stateParams, CommonFactory) {
+        .controller('profilePageCtrl', [ '$scope', '$stateParams', 'CommonFactory', '$location',
+            function ($scope, $stateParams, CommonFactory, $location) {
                 var id = $stateParams.id;
                 $scope.mongoUser = {
                     profileId: '0',
