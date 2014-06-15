@@ -22,7 +22,8 @@ router.route('/all')
                             'sessionId': req.user.sessionId
                         },
                         function (e, r, data) {
-                            return callback(e, data);
+                            data=JSON.parse(data);
+                            return callback(e, data.Profiles);
                         }
                     );
                 },
