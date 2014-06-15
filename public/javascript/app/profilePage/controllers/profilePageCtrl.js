@@ -25,7 +25,7 @@
                             }
                         }
 
-                        if (smgUser == undefined) {
+                        if ($scope.smgUser == undefined) {
                             $location.url('/');
                             return;
                         }
