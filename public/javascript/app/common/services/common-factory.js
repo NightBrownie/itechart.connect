@@ -8,7 +8,9 @@
                 getCurrentUser: function () {
                     if (user) {
                         var deferred = $q.defer();
-                        return deferred.resolve(user);
+                        setTimeout(deferred.resolve(user),0);
+                        return deferred.promise;
+
                     }
                     return RequestFactory.request({
                         url: '/employees/getCurrentUser'
