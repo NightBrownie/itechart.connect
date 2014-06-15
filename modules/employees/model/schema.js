@@ -3,6 +3,7 @@
 var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({
+    profileId: Number, //smg profile id
     github: String,
     twitter: String,
     description: String,

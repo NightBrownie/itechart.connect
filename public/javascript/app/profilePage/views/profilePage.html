@@ -4,12 +4,13 @@
             <div class="col-md-8 col-md-offset-2 profile-container panel panel-default">
                 <div class="row">
                     <div class="col-md-4 profile-image-container">
-                        <img src="http://cs10586.vk.me/u22101394/a_12048dd1.jpg"></img>
+                        <img ng-src="{{smgUser.Image}}"/>
                     </div>
                     <div class="col-md-8">
-                        <h3><a href="#">Nikita Klushnikov (Никита Клюшников)</a></h3>
-                        <h4>Software %Rankhere% Engineer, Department 5</h4>
-                        Resides in <a href="#" class="profile-room-link">Room 522</a>
+                        <h3><a href="#">{{smgUser.FirstNameEng + ' ' + smgUser.LastNameEng + ' ('
+                            + smgUser.FirstName + ' ' + smgUser.LastName + ')'}}</a></h3>
+                        <h4>{{smgUser.Position}}</h4>
+                        Location: <a href="#" class="profile-room-link">{{smgUser.Room}}</a>
                         <hr/>
                         <dl>
                             <dt>Birthdate: </dt>

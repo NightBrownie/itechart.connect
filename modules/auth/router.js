@@ -1,4 +1,4 @@
-'use strict';
+ 'use strict';
 
 var router = require('express').Router(),
     smgService = require('../../smg');

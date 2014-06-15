@@ -154,7 +154,7 @@
                         }
                     })
                     .state('profile', {
-                        url: '/profile/',
+                        url: '/profile/{id}',
                         views: {
                             'main-view': {
                                 templateUrl: '/javascript/app/profilePage/views/profilePage.html',

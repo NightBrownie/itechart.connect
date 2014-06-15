@@ -18,6 +18,13 @@
                         user = data[0];
                         return user;
                     });
+                },
+                getAllUsers: function () {
+                    return RequestFactory.request({
+                        url: '/employees/all'
+                    }).then(function (data) {
+                        return data;
+                    });
                 }
             };
         }]);
