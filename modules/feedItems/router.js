@@ -6,7 +6,7 @@ var router = require('express').Router(),
 router.route('/getFeed')
     .get(function (req, res) {
         controller.getFeedItems(req.body, function(items) {
-            return res.send(items);
+            return res.send([{title: '32332'}]);//items);
         });
     });
 

@@ -2,7 +2,7 @@
 
 (function (window, undefined) {
     angular.module('itechart-connect')
-        .controller('groupsPageCtrl', [ '$scope', function ($scope) {
+        .controller('groupsPageCtrl', [ '$scope', 'FeedFactory', '$stateParams', function ($scope, FeedFactory, $stateParams) {
             $scope.sidebarTiles = [
                 {
                     iconClass: 'fa-child',
@@ -38,13 +38,9 @@
 
 
             FeedFactory.getFeeds({
-                visibility: 0
+                visibility: $stateParams.groupId
             }).then(function(feedElements){
                 $scope.items = feedElements;
             });
-
-            $scope.clickfeed = function () {
-                alert('click Feed');
-            };
         }]);
 })(window)

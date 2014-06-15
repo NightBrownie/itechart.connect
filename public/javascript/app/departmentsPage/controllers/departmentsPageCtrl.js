@@ -43,9 +43,5 @@
                     $scope.items = feedElements;
                 });
             });
-
-            $scope.clickfeed = function () {
-                alert('click Feed');
-            };
         }]);
 })(window)
