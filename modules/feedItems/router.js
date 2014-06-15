@@ -5,7 +5,7 @@ var router = require('express').Router(),
 
 router.route('/getFeed')
     .get(function (req, res) {
-        controller.getFeedItems(req.body, function(items){
+        controller.getFeedItems(req.body, function(items) {
             return res.send(items);
         });
     });

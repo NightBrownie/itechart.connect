@@ -2,17 +2,19 @@
 
 (function (window, undefined) {
     angular.module('itechart-connect')
-        .factory('CommonFactory', ['$http', 'RequestFactory', function ($http, RequestFactory) {
+        .factory('CommonFactory', ['$http', '$q', 'RequestFactory', function ($http, $q, RequestFactory) {
             var user;
             return {
                 getCurrentUser: function () {
                     if (user) {
-                        return user;
+                        var deferred = $q.defer();
+                        return deferred.resolve(user);
                     }
-                    RequestFactory.request({
+                    return RequestFactory.request({
                         url: '/employees/getCurrentUser'
                     }).then(function (data) {
-                        user = data;
+                        user = data[0];
+                        return user;
                     });
                 }
             };

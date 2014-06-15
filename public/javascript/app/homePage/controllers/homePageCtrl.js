@@ -2,7 +2,7 @@
 
 (function (window, undefined) {
     angular.module('itechart-connect')
-        .controller('homePageCtrl', function($scope) {
+        .controller('homePageCtrl',['$scope', 'FeedFactory', function($scope, FeedFactory) {
             $scope.sidebarTiles = [
                 {
                     iconClass: 'fa-child',
@@ -35,5 +35,15 @@
                     destinationUrl: '#'
                 }
             ];
-        });
+
+            FeedFactory.getFeeds({})
+                .then(function(feedElements){
+                    $scope.items = feedElements;
+                });
+
+            $scope.clickfeed = function () {
+                alert('click Feed');
+            };
+
+        }]);
 })(window);

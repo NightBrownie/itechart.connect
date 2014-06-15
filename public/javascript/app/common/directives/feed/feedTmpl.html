@@ -1,6 +1,6 @@
-<div class="col-md-8 info-container">
-    <div class="panel panel-default feed-item" ng-repeat="record in feedElements track by _id"
-         ng-click="clickFunction(record)">
+<div class="info-container">
+    <div class="panel panel-default feed-item" ng-repeat="record in items"
+         ng-click="clickfeed(record)">
         <div class="panel-heading">
             {{ record.title }}
         </div>

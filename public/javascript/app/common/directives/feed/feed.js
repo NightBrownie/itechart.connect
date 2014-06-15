@@ -2,15 +2,15 @@
 
 (function(window, undefined) {
     angular.module('itechart-connect')
-        .directive('Feed', function () {
+        .directive('feed', function () {
         return {
             restrict: 'E',
             templateUrl: '/javascript/app/common/directives/feed/feedTmpl.html',
 
             //directive scope fields
             scope: {
-                feedElements: '=',
-                clickFunction: '='
+                items: '=',
+                clickfeed: '='
             }
         };
     });

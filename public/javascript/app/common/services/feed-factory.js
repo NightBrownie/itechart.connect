@@ -6,7 +6,7 @@
             return {
                 getFeeds: function (filters) {
                     return RequestFactory.request({
-                        url: '/employees/getCurrentUser',
+                        url: '/feedItems/getFeed',
                         data: filters
                     }).then(function (feeds) {
                         return feeds;

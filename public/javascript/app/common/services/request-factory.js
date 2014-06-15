@@ -16,13 +16,12 @@
 
                 sendRequest: function sendRequest(config) {
                     var deferred = $q.defer();
-
                     $http(config).success(function (response) {
                         if (response.status >= 400) {
                             return deferred.reject(response);
                         }
 
-                        return deferred.resolve(response.data);
+                        return deferred.resolve(response);
                     }).error(function (err) {
                         return deferred.reject(err);
                     });
