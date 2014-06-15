@@ -1,0 +1,16 @@
+<div class="thumbnail person-container">
+    <div class="caption">
+        <h3><a ng-href="/user/{{userInfo.profileId}}">{{userInfo.name}}</a></h3>
+        <img ng-src="{{userInfo.avatarImgLink}}">
+        <hr/>
+        Skills:
+        <div class="person-tag-cloud">
+            <a class="tag" ng-repeat="skill in userInfo.skills">{{skill.name}} </a>
+        </div>
+        <hr/>
+        Interests:
+        <div class="person-tag-cloud">
+            <a class="tag" ng-repeat="interest in userInfo.interests">{{interest.name}} </a>
+        </div>
+    </div>
+</div>

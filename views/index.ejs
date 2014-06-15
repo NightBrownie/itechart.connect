@@ -5,6 +5,7 @@
 
     <link rel='stylesheet' href='/javascript/bower_components/bootstrap/dist/css/bootstrap.min.css' />
     <link rel='stylesheet' href='/javascript/bower_components/bootstrap/dist/css/bootstrap-theme.min.css' />
+    <link rel='stylesheet' href="/vendor/bootstrap-tag-cloud/bootstrap-tag-cloud.css" />
     <link rel='stylesheet' href='/javascript/bower_components/angular/angular-csp.css' />
     <link rel='stylesheet' href='/javascript/bower_components/font-awesome-bower/css/font-awesome.css' />
     <link rel='stylesheet' href='/stylesheets/base.css' />
@@ -18,8 +19,8 @@
     <script src="/javascript/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
   </head>
   <body>
-    <header>
-        <img class="main-logo" src="/images/logo.png"/>
+    <header class="navbar navbar-default">
+        <img class="main-logo" src="/images/logo.png"/><span class="connect-text">::connect</span>
     </header>
 
     <div id="main-content">
@@ -32,7 +33,7 @@
                     <li ui-sref-active="active"><a ui-sref="rooms">Rooms</a></li>
                     <li ui-sref-active="active"><a ui-sref="groups">Groups</a></li>
                     <li class="pull-right" ui-sref-active="active">
-                        <a ui-sref="newcomers">Newcomers <span class="badge">HOT!</span></a>
+                        <a ui-sref="newcomers">Newcomers <span class="badge badge-hot">HOT!</span></a>
                     </li>
                 </ul>
             </div>
@@ -58,14 +59,20 @@
     <script src="/javascript/app/homePage/controllers/homePageCtrl.js"></script>
     <script src="/javascript/app/newcomersPage/controllers/newcomersPageCtrl.js"></script>
     <script src="/javascript/app/roomsPage/controllers/roomsPageCtrl.js"></script>
+    <script src="/javascript/app/peoplePage/controllers/peoplePageCtrl.js"></script>
 
-    <%//services%>
-    <script src="/javascript/app/common/services/common-factory.js"></script>
-    <script src="/javascript/app/common/services/request-factory.js"></script>
+    <%//generic pages controllers%>
+    <!--<script src="/javascript/app/docsPage/controllers/docsPageCtrl.js"></script>
+    <script src="/javascript/app/photosCompanyPage/controllers/photosCompanyPageCtrl.js"></script>
+    <script src="/javascript/app/photosDeptPage/controllers/photosDeptPageCtrl.js"></script>
+    <script src="/javascript/app/eventsPage/controllers/eventsPageCtrl.js"></script>
+    <script src="/javascript/app/meetupsPage/controllers/meetupsPageCtrl.js"></script>-->
 
     <%//directives%>
     <script src="/javascript/app/common/directives/infoBarTile/infoBarTile.js"></script>
     <script src="/javascript/app/common/directives/tilesSidebar/tilesSidebar.js"></script>
-    <script src="/javascript/app/common/directives/feed/feed.js"></script>
+    <script src="/javascript/app/common/directives/userInfoTile/userInfoTile.js"></script>
+    <script src="/javascript/app/common/directives/userSearch/userSearch.js"></script>
   </body>
 </html>
+

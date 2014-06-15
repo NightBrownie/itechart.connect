@@ -45,11 +45,29 @@
                         }
                     })
                     .state('people', {
-                        url: '/people/',
+                        url: '/people/company/{tag}',
                         views: {
-                            'main-view': {templateUrl: '/javascript/app/peoplePage/views/peoplePage.html'}
+                            'main-view': {
+                                templateUrl: '/javascript/app/peoplePage/views/peoplePage.html',
+                                controller: 'peoplePageCtrl'
+                            }
+                        }
+                    })
+                    .state('peopleDept', {
+                        url: '/people/department/{tag}',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/peoplePage/views/peoplePage.html',
+                                controller: 'peoplePageCtrl'
+                            }
+                        }
+                    })
+                    .state('profile', {
+                        url: '/profile/',
+                        views: {
+                            'main-view': {templateUrl: '/javascript/app/profilePage/views/profilePage.html'}
                         },
-                        controller: 'peoplePageCtrl'
+                        controller: 'profilePageCtrl'
                     })
                     .state('newcomers', {
                         url: '/newcomers/',

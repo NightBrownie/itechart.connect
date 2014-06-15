@@ -7,19 +7,58 @@
   border-radius: @radius;
 }
 
+/* fonts */
+
+@font-face {
+  font-family: 'hello_heartacheregular';
+  src: url('/fonts/hello_heartache-webfont.eot');
+  src: url('/fonts/hello_heartache-webfont.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/hello_heartache-webfont.woff') format('woff'),
+  url('/fonts/hello_heartache-webfont.ttf') format('truetype'),
+  url('/fonts/hello_heartache-webfont.svg#hello_heartacheregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'trench';
+  src: url('/fonts/trench100free.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'kirvy-regular';
+  src: url('/fonts/kirvy-regular.otf') format('opentype');
+}
 
 /* main stylesheet */
 
-header {
+header.navbar {
   height: 75px;
   background-color: @headerColor;
   padding-left: @leftPadding;
   padding-top: 20px;
   .rounded-corners(10px);
+  margin-bottom: 0;
+
+  img {
+    float: left;
+  }
+
+  .connect-text {
+    display: block;
+    float: left;
+    font-family: 'trench';
+    margin-top: -5px;
+    font-size: 50px;
+    margin-left: 10px;
+    //font-weight: bold;
+    text-shadow: 1px 1px #700;
+  }
 }
 
 body {
   padding: 50px;
+  padding-top: 35px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -34,6 +73,7 @@ body {
 
   .sidebar-container {
     h2 {
+      margin-top: 0;
       text-align: center;
     }
 
@@ -88,12 +128,67 @@ body {
 
   }
 
+  .profile-container {
+    padding-bottom: 20px;
+    .profile-image-container {
+      padding-top: 20px;
+      text-align: center;
+      img {
+        .rounded-corners();
+      }
+    }
+
+    dl {
+      dd {
+        margin-bottom: 15px;
+      }
+    }
+    .profile-skills-row {
+        h5 {
+        text-align: center;
+      }
+      .profile-skills-container {
+        border-right: 1px solid #ddd;
+      }
+    }
+    .github-iframe-container {
+      text-align: center;
+      .github-iframe {
+        //display: inline-block;
+      }
+    }
+    .github-link {
+      display: block;
+      text-align: center;
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  }
+
   .info-container {
-    padding-top: 80px;
     padding-right: 150px;
     .feed-item {
-
+      &:first-child {
+        margin-top: 60px;
+      }
     }
+
+    .search-bar-container {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 20px;
+      .search-button {
+        min-width: 84px;
+        color: white;
+      }
+      .input-group {
+        margin-bottom: 10px;
+      }
+      .search-tag-cloud {
+        padding: 0;
+      }
+    }
+
 
     .thumbnail.person-container {
       .caption {
@@ -109,6 +204,7 @@ body {
 }
 
 a.tag {
+  font-family: 'kirvy-regular';
   font-size:0.75em;
   &:nth-child(3n), &:first-child {
     font-size: 1.2em;
@@ -116,6 +212,10 @@ a.tag {
   &:nth-child(5n) {
     font-size: 1.6em;
   }
+}
+
+.badge.badge-hot {
+  background-color: #cf2233;
 }
 
 a {
