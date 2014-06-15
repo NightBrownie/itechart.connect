@@ -29,7 +29,10 @@ exports.initialize = function (app) {
                 if (!data.SessionId) {
                     return done(null, false);
                 }
-                return done(null, data.SessionId);
+                var user = {};
+                user.name = username;
+                user.sessionId = data.SessionId
+                return done(null, user);
             });
         }));
 

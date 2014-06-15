@@ -3,10 +3,10 @@
 var router = require('express').Router(),
     controller = require('./controller');
 
-router.route('/getEvents')
+router.route('/getGroups')
     .get(function (req, res) {
-        controller.getEvents(req.body, function(events){
-            return res.send(events);
+        controller.getGroups(req.body, function(groups){
+            return res.send(groups);
         });
     });
 
