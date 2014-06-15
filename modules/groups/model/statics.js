@@ -5,3 +5,10 @@ exports.getGroups = function (filter, callback) {
         callback(err, groups);
     });
 };
+
+exports.createGroup = function (group, callback) {
+    var Model = this,
+        item = new Model(group);
+
+    item.save(callback);
+};

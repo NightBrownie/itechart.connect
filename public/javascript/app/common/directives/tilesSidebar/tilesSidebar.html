@@ -1,5 +1,7 @@
 <div class="col-md-4 sidebar-container">
-    <h2>Explore</h2>
+    <h2>Explore
+       <a class="btn btn-sm btn-success" ui-sref="{{ operation.url }}" ng-repeat="operation in operations">{{operation.text}}<a>
+    </h2>
     <div class="container-fluid tiles-container">
         <info-bar-tile ng-repeat="tile in tiles" icon-class="tile.iconClass"
                        title="tile.title"

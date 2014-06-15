@@ -16,7 +16,7 @@ var config = require('./config');
 
 var app = express();
 
-mongoose.set('debug', config.debug);
+mongoose.set('debug', true);
 mongoose.connect(config.database.url, config.database.auth, function (err) {
 // all environments
     app.set('port', process.env.PORT || 3000);

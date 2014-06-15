@@ -9,7 +9,8 @@
 
                 //directive scope fields
                 scope: {
-                    tiles: '='
+                    tiles: '=',
+                    operations: '='
                 }
             }
         });

@@ -54,6 +54,15 @@
                             }
                         }
                     })
+                    .state('createGroup', {
+                        url: '/groups/create',
+                        views: {
+                            'main-view': {
+                                templateUrl: '/javascript/app/groupsPage/views/createGroupsPage.html',
+                                controller: 'groupsPageCtrl'
+                            }
+                        }
+                    })
                     .state('home', {
                         url: '/',
                         views: {

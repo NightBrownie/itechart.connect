@@ -2,7 +2,8 @@
 
 (function (window, undefined) {
     angular.module('itechart-connect')
-        .controller('groupsPageCtrl', [ '$scope', 'FeedFactory', '$stateParams', function ($scope, FeedFactory, $stateParams) {
+        .controller('groupsPageCtrl', [ '$scope', '$state', 'FeedFactory', 'GroupFactory', '$stateParams',
+            function ($scope, $state, FeedFactory, GroupFactory, $stateParams) {
             $scope.sidebarTiles = [
                 {
                     iconClass: 'fa-child',
@@ -36,11 +37,32 @@
                 }
             ];
 
+            $scope.operations = [
+                {
+                    icon: 'glyphicon-plus',
+                    text: 'Add',
+                    url:'createGroup'
+                }
+            ];
+
 
             FeedFactory.getFeeds({
                 visibility: $stateParams.groupId
             }).then(function(feedElements){
                 $scope.items = feedElements;
             });
+
+            $scope.createModel = {
+                name: '',
+                description: ''
+            };
+
+            $scope.createGroup = function(){
+                GroupFactory.createGroup($scope.createModel).then(
+                    function(){
+                        $state.go('groups');
+                    }
+                );
+            };
         }]);
 })(window)

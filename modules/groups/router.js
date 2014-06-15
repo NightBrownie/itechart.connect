@@ -10,6 +10,13 @@ router.route('/getGroups')
         });
     });
 
+router.route('/create')
+    .post(function (req, res) {
+        controller.createGroup(req.body, function(){
+            return res.send();
+        });
+    });
+
 router.route('/joinGroup')
     .get(function (req, res) {
         controller.join(req.profileId, req.groupId, function(err){
