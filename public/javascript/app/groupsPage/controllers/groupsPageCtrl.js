@@ -7,25 +7,25 @@
             $scope.sidebarTiles = [
                 {
                     iconClass: 'fa-child',
-                    title: 'People',
+                    title: 'List',
                     backgroundImgUrl: '/images/tiles/people.jpg',
-                    destinationUrl: '/people/company/'
+                    destinationUrl: '/groups/'
                 },
                 {
                     iconClass: 'fa-files-o',
-                    title: 'Docs',
+                    title: 'Sport',
                     backgroundImgUrl: '/images/tiles/docs.jpg',
                     destinationUrl: '#'
                 },
                 {
                     iconClass: 'fa-camera-retro',
-                    title: 'Photos',
+                    title: 'Web',
                     backgroundImgUrl: '/images/tiles/photos.jpg',
                     destinationUrl: '#'
                 },
                 {
                     iconClass: 'fa-glass',
-                    title: 'Events',
+                    title: 'dotNet',
                     backgroundImgUrl: '/images/tiles/events.jpg',
                     destinationUrl: '#'
                 },
@@ -45,6 +45,9 @@
                 }
             ];
 
+            GroupFactory.getAllGroups().then(function(groups){
+                $scope.groups = groups;
+            });
 
             FeedFactory.getFeeds({
                 visibility: $stateParams.groupId

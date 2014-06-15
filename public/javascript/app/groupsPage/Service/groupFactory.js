@@ -12,6 +12,13 @@
                     }).then(function (feeds) {
                         return feeds;
                     });
+                },
+                getAllGroups:function(){
+                    return RequestFactory.request({
+                        url: '/groups/getGroups'
+                    }).then(function (groups) {
+                        return groups;
+                    });
                 }
             };
         }]);

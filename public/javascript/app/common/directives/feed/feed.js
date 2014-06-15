@@ -13,21 +13,7 @@
                 },
                 controller: function ($scope, $state) {
                     $scope.clickfeed = function (item) {
-//                        switch (item.type) {
-//                            case 3:
-//                            {
-//                                $state.go('event.edit');
-//                                break;
-//                            }
-//                            case 4:
-//                            {
-//                                $state.go('gallery.edit');
-//                                break;
-//                            }
-//                            default:{
-//
-//                            }
-//                        }
+                        $state.go('eventInfo', {id: item.redId });
                     };
                 }
             };

@@ -7,7 +7,8 @@
                 getFeeds: function (filters) {
                     return RequestFactory.request({
                         url: '/feedItems/getFeed',
-                        data: filters
+                        data: filters,
+                        method: 'POST'
                     }).then(function (feeds) {
                         return feeds;
                     });

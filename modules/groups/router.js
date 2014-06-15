@@ -5,7 +5,7 @@ var router = require('express').Router(),
 
 router.route('/getGroups')
     .get(function (req, res) {
-        controller.getGroups(req.body, function(groups){
+        controller.getGroups(req.body, function(err, groups){
             return res.send(groups);
         });
     });

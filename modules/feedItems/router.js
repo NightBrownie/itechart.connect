@@ -4,8 +4,8 @@ var router = require('express').Router(),
     controller = require('./controller');
 
 router.route('/getFeed')
-    .get(function (req, res) {
-        controller.getFeedItems(req.body, function(items) {
+    .post(function (req, res) {
+        controller.getFeedItems(req.body, function(err, items) {
             return res.send(items);
         });
     });

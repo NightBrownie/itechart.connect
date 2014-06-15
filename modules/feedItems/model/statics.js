@@ -5,3 +5,9 @@ exports.getFeedItems = function (filter, callback) {
         callback(err, feedItems);
     });
 };
+
+exports.createFeedItem = function(feeditem, callback){
+    var Model = this;
+    var item = new Model(feeditem);
+    item.save(callback);
+};

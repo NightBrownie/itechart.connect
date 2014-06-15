@@ -2,11 +2,11 @@
 
 var router = require('express').Router(),
     controller = require('./controller'),
-    mongoose = require('mongoose');
+    feedController = require('../feedItems/controller');
 
 router.route('/getEvents')
     .post(function (req, res) {
-        controller.getEvents(req.body, function(events){
+        controller.getEvents(req.body, function (events) {
             return res.send(events);
         });
     });
@@ -20,8 +20,21 @@ router.route('/getEventById')
 
 router.route('/setEvent')
     .post(function (req, res) {
-        controller.setEvent(req.body, function(events) {
-            return res.end();
+        console.log(req.body);
+        controller.setEvent(req.body, function (err, event) {
+            console.log('1 ' + err + ' ' + event);
+            var feed = {};
+            feed.author = event.author;
+            feed.title = event.title;
+            feed.shortContent = event.shortContent;
+            feed.type = 1;//event
+            feed.visibility = event.visibility;
+            feed.refId = event.id;
+            console.log('2 ' + JSON.stringify(feed));
+            feedController.createFeedItem(feed, function () {
+                console.log('55 ' + JSON.stringify(feed));
+                return res.end();
+            });
         });
     });
 

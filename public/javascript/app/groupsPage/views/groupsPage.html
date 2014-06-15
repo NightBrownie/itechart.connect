@@ -2,7 +2,17 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <feed items="items" clickfeed="clickfeed"></feed>
+                <div ng-repeat="group in groups">
+                    <div class="col-md-6 tile-container">
+                        <a ng-href="/groups/" title="List" href="/groups/">
+                            <div class="group-tile" style="background: url(http://localhost:3000/images/tiles/github.jpeg);">
+                                <h3 ng-model="title" class="ng-pristine ng-valid">
+                                    <i class="fa fa-child"></i> {{group.name}}
+                                </h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <tiles-sidebar tiles="sidebarTiles" operations="operations"></tiles-sidebar>
