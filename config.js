@@ -5,10 +5,10 @@ module.exports = {
         url: ' https://smg.itechart-group.com/MobileServiceNewTest/MobileService.svc/'
     },
     database:{
-        url: 'mongodb://dbs004.mongosoup.de/cc_cDPcqLIDmIai',
+        url: 'mongodb://dbs004.mongosoup.de/cc_SChxcIksGwEI',
         auth: {
-            user: 'cDPcqLIDmIai',
-            pass: 'JfaodWeAgHqB'
+            user: 'SChxcIksGwEI',
+            pass: 'RcHXWwpakRvU'
         }
     }
 }
